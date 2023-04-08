@@ -1,15 +1,13 @@
 import { createContext, useReducer} from "react";
 
 
-const getFavsFromLocaltorage = () => {
+const getFavs = () => {
   const localData = localStorage.getItem("favs");
   return localData ? JSON.parse(localData) : [] ; 
-
 }
 
 
-const saveFavsFromStorage= (fav) =>{
-
+const saveFavs= (fav) =>{
   localStorage.setItem("favs", JSON.stringify(fav));
 }
 
@@ -17,7 +15,7 @@ const saveFavsFromStorage= (fav) =>{
 const reducer = (state, action) => {
   switch(action.type){
     case "addFav":
-      saveFavsFromStorage([...state, action.payload]);
+      saveFavs([...state, action.payload]);
       return [...state, action.payload];
       default: 
       return ;
@@ -32,8 +30,7 @@ export const initialState = {theme: "", data: []}
 export const ContextGlobal = createContext(undefined);
 
 export const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
-  const [state, dispatch] = useReducer(reducer, [], getFavsFromLocaltorage)
+  const [state, dispatch] = useReducer(reducer, [], getFavs)
 
   return (
     <ContextGlobal.Provider value={{state, dispatch}}>

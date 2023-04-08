@@ -15,8 +15,6 @@ const Favs = () => {
     return <h2 className="noFav">No hay favoritos guardados ⭐</h2>
 }
 
-  
-  console.log(state)
 
   return (
     <>
