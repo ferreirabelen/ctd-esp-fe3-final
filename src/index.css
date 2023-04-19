@@ -104,6 +104,7 @@ form{
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
