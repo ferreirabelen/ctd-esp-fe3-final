@@ -35,6 +35,11 @@ code {
   box-shadow: rgb(194, 193, 208) 5px 5px 5px;
 }
 
+.contact{
+  text-align: center;
+  padding-top: 20px;
+}
+
 h1{
   text-align: center;
 }
@@ -81,13 +86,18 @@ form{
   flex-direction: column;
   justify-content: space-around;
   width: 300px;
-  height: 270px;
+  height: 140px;
   margin: 0 auto;
-  background-color: rgb(134, 189, 228);
   padding: 15px;
   color:white;
-  box-shadow: rgb(184, 227, 239) 5px 5px 5px;
-  
+
+}
+.botonForm{
+  width: 150px;
+  margin-left: 72px;
+  background-color: rgb(106, 197, 230);
+  color: white;
+  padding: 2px
 }
 
 .card{

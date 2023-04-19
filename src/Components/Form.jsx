@@ -46,13 +46,13 @@ const Form = () => {
         <>
         
         <form onSubmit={onSubmitFormulario}>
-        <h1>Formulario</h1>
+        
             <input
             type="text"
             placeholder="Ingresar tu nombre"
             value={nombre}
             onChange={guardarNombre}
-            required
+            
             />
 
             <input
@@ -60,10 +60,10 @@ const Form = () => {
             value={email}
             placeholder="Ingresar tu email de contacto!"
             onChange={guardarEmail}
-            required
+            
             />
 
-        <button type="submit">Enviar</button>
+        <button type="submit" className="botonForm">Enviar</button>
         </form>
         
 
